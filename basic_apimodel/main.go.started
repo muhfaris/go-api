@@ -1,0 +1,25 @@
+package main
+
+import (
+	"github.com/gin-gonic/gin"
+)
+
+func main() {
+	r := gin.Default()
+	r.GET("/", func(c *gin.Context) {
+		// String text to web browser
+		// c.String(200, "Hello world")
+
+		// Show json format
+		c.JSON(200, gin.H{
+			"message": "Hello world",
+		})
+		/* uri : localhost:8080
+		 * ------------------------
+		 * {“message”: “Hello World”}
+		 *
+		 **/
+	})
+	// Default listen gin serve in port 8080
+	r.Run()
+}
