@@ -1,11 +1,4 @@
 ## Basic Model API
-
-I create three type :
-- started (main.go.started)
-- using sqlite (main.go.sqlite)
-- using mysql (main.go)
-
-if you want to run type `started` or `sqlite`, please rename first !
 ### Requirement
 #### Started
 -  Gin (github.com/gin-gonic/gin)
