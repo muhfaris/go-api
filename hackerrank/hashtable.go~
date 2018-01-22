@@ -1,0 +1,46 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main() {
+	var n int = 2
+	reader := bufio.NewReader(os.Stdin)
+	rstring := bufio.ReadString(os.stdin)
+
+	array := make([]int, n)
+
+	for i := 0; i < n; i++ {
+		fmt.Fscan(reader, &array[i])
+	}
+
+	data := make([]string, n)
+	for j := 0; j < 1; j++ {
+		fmt.Fscan(rstring, &data[j])
+	}
+
+	for _, l := range data {
+		fmt.Println(l)
+	}
+	itext1 := bufio.NewReader(os.Stdin)
+	itext2 := bufio.NewReader(os.Stdin)
+	text1, _ := itext1.ReadString('\n')
+	text2, _ := itext2.ReadString('\n')
+
+	strs := strings.Fields(text1)
+	strs2 := strings.Fields(text2)
+
+	len1 := len(strs)
+	len2 := len(strs2)
+
+	if (len1 == array[0]) && (len2 == array[1]) {
+		fmt.Println("Yes")
+	} else {
+		fmt.Println("No")
+	}
+
+}
