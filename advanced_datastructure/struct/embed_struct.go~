@@ -1,0 +1,40 @@
+package main
+
+import (
+	"fmt"
+)
+
+type Skills []string
+
+type Human struct {
+	Name   string
+	Age    int
+	Weight int
+}
+
+type Student struct {
+	Human
+	Skills
+	int        //built-in type as embeded field
+	Speciality string
+}
+
+func main() {
+	//initial
+	jane := Student{Human: Human{"Jane", 20, 60}, Speciality: "Biologi"}
+
+	fmt.Println("Her name is ", jane.Name)
+	fmt.Println("Her age is ", jane.Age)
+	fmt.Println("Her weight is ", jane.Weight)
+	fmt.Println("Het Speciality is ", jane.Speciality)
+
+	jane.Skills = []string{"anatomy"}
+	fmt.Println("Her skill is", jane.Skills)
+
+	jane.Skills = append(jane.Skills, "physics", "golang")
+	fmt.Println("Her skill is ", jane.Skills)
+
+	jane.int = 3
+	fmt.Println("Her number is ", jane.int)
+
+}
