@@ -1,0 +1,40 @@
+package main
+
+import (
+	"fmt"
+)
+
+const (
+	pi = 3.14
+)
+
+type Rectangle struct {
+	widht, height float64
+}
+
+type Circle struct {
+	radius float64
+}
+
+func (r Rectangle) Area() float64 {
+	return r.widht * r.height
+}
+
+func (c Circle) Area() float64 {
+	return c.radius * c.radius * pi
+}
+
+func main() {
+	r1 := Rectangle{12, 2}
+	r2 := Rectangle{9, 4}
+
+	c1 := Circle{10}
+	c2 := Circle{14}
+
+	fmt.Println("Area of R1 is :", r1.Area())
+	fmt.Println("Area of R2 is :", r2.Area())
+
+	fmt.Println("Area of C1 is :", c1.Area())
+	fmt.Println("Area of C2 is :", c2.Area())
+
+}
