@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+)
+
+type Retangle struct {
+	length, width int
+}
+
+func main() {
+	r := Retangle{}
+	fmt.Println("Default retangle is:", r)
+}
+
+/**
+Default retangle is: {0 0}
+*/
