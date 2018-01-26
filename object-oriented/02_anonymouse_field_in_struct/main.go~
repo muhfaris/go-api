@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+)
+
+type Kitchen struct {
+	numOfPlate int
+}
+
+type House struct {
+	Kitchen    // anaonymouse field
+	numOfRooms int
+}
+
+func main() {
+	// initialize
+	h := House{Kitchen{10}, 4}
+
+	fmt.Println("House h has this man room :", h.numOfRooms)
+	fmt.Println("House h has this many plates :", h.numOfPlate)
+	fmt.Println("The Kitchen contents of house:", h.Kitchen)
+}
+
+/**
+House h has this man room : 4
+House h has this many plates : 10
+The Kitchen contents of house: {10}
+**/
