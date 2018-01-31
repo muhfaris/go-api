@@ -1,4 +1,4 @@
-## How to connect to MySQL
+## Restfull API with standart library
 ### Prepare
 - Create database
 - Create table `user` with schema like :
